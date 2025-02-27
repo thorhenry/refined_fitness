@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Tracking - Refined Fitness</title>
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f8f9fa;
+        }
+
+        .tracking-container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .tracking-form {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+
+        .tracking-form h1 {
+            color: #274fae;
+            margin-bottom: 25px;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: 500;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        .track-button {
+            background: #274fae;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s;
+            width: 100%;
+        }
+
+        .track-button:hover {
+            background: #1a3a8f;
+        }
+
+        .tracking-result {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            display: none;
+        }
+
+        .tracking-status {
+            margin-top: 20px;
+        }
+
+        .status-step {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .status-icon {
+            width: 30px;
+            height: 30px;
+            background: #274fae;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            margin-right: 15px;
+        }
+
+        .status-info {
+            flex: 1;
+        }
+
+        .status-info h3 {
+            margin: 0;
+            color: #274fae;
+        }
+
+        .status-info p {
+            margin: 5px 0 0;
+            color: #666;
+        }
+
+        .status-line {
+            position: absolute;
+            left: 15px;
+            top: 30px;
+            bottom: -20px;
+            width: 2px;
+            background: #274fae;
+        }
+
+        .status-step:last-child .status-line {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .tracking-container {
+                margin: 20px;
+                padding: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="tracking-container">
+        <div class="tracking-form">
+            <h1>Track Your Order</h1>
+            <div class="input-group">
+                <label for="order-number">Order Number</label>
+                <input type="text" id="order-number" placeholder="Enter digit order number" maxlength="14" pattern="\d{14}">
+            </div>
+            <div class="input-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" placeholder="Enter your email address">
+            </div>
+            <button class="track-button" onclick="trackOrder()">Track Order</button>
+        </div>
+
+        <div class="tracking-result">
+            <h2>Order Status</h2>
+            <div class="tracking-status">
+                <!-- Status steps will be inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function trackOrder() {
+            const orderNumber = document.getElementById('order-number').value;
+            const email = document.getElementById('email').value;
+    
+            // Validate order number format (14 digits)
+            const orderNumberRegex = /^\d{14}$/;
+            if (!orderNumberRegex.test(orderNumber)) {
+                alert('Please enter a valid digit order number');
+                return;
+            }
+    
+            if (!email) {
+                alert('Please enter your email address');
+                return;
+            }
+    
+            // Show tracking result
+            const trackingResult = document.querySelector('.tracking-result');
+            trackingResult.style.display = 'block';
+    
+            // Get current date and create timestamps for the last 2 days
+            const now = new Date();
+            const yesterday = new Date(now);
+            yesterday.setDate(now.getDate() - 1);
+            const twoDaysAgo = new Date(now);
+            twoDaysAgo.setDate(now.getDate() - 2);
+    
+            // Format date and time
+            function formatDateTime(date) {
+                return date.toLocaleDateString('en-US', {
+                    month: 'long',
+                    day: 'numeric',
+                    year: 'numeric'
+                }) + ' - ' + date.toLocaleTimeString('en-US', {
+                    hour: '2-digit',
+                    minute: '2-digit'
+                });
+            }
+    
+            // Example status steps with real-time dates
+            const statusSteps = [
+                {
+                    title: 'Order Confirmed',
+                    date: formatDateTime(twoDaysAgo),
+                    description: 'Your order has been confirmed and is being processed'
+                },
+                {
+                    title: 'Processing',
+                    date: formatDateTime(yesterday),
+                    description: 'Your order is being prepared for shipping'
+                },
+                {
+                    title: 'Shipped',
+                    date: formatDateTime(new Date(now.setHours(now.getHours() - 4))),
+                    description: 'Your order has been shipped via Express Delivery'
+                },
+                {
+                    title: 'Out for Delivery',
+                    date: formatDateTime(now),
+                    description: 'Your order is out for delivery'
+                }
+            ];
+    
+            const trackingStatus = document.querySelector('.tracking-status');
+            trackingStatus.innerHTML = statusSteps.map(step => `
+                <div class="status-step">
+                    <div class="status-icon">✓</div>
+                    <div class="status-info">
+                        <h3>${step.title}</h3>
+                        <p>${step.description}</p>
+                        <small>${step.date}</small>
+                    </div>
+                    <div class="status-line"></div>
+                </div>
+            `).join('');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Initiate Return - Refined Fitness</title>
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f8f9fa;
+        }
+
+        .return-container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .return-form {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+
+        .return-form h1 {
+            color: #274fae;
+            margin-bottom: 25px;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: 500;
+        }
+
+        .input-group input, .input-group select, .input-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        .input-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .submit-button {
+            background: #274fae;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s;
+            width: 100%;
+        }
+
+        .submit-button:hover {
+            background: #1a3a8f;
+        }
+
+        .return-policy {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-top: 20px;
+        }
+
+        .return-policy h2 {
+            color: #274fae;
+            margin-bottom: 15px;
+        }
+
+        .return-policy ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .return-policy li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .return-policy li:before {
+            content: "•";
+            color: #274fae;
+            position: absolute;
+            left: 0;
+        }
+
+        @media (max-width: 768px) {
+            .return-container {
+                margin: 20px;
+                padding: 0;
+            }
+        }
+    </style>
+    <!-- Add these lines after your existing meta tags -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("ry-BoOClBJSvulKCj");
+        })();
+    </script>
+    <!-- Remove this line -->
+    <!-- emailjs.send('service_id', 'template_id', templateParams) -->
+</head>
+<body>
+    <div class="return-container">
+        <div class="return-form">
+            <h1>Initiate Return</h1>
+            <form onsubmit="submitReturn(event)">
+                <div class="input-group">
+                    <label for="order-number">Order Number</label>
+                    <input type="text" id="order-number" placeholder="Enter digit order number" maxlength="14" pattern="\d{14}" required>
+                </div>
+                <div class="input-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" placeholder="Enter your email address" required>
+                </div>
+                <div class="input-group">
+                    <label for="product">Product to Return</label>
+                    <select id="product" required>
+                        <option value="">Select product from your order</option>
+                        <option value="treadmill">Treadmill</option>
+                        <option value="bike">Exercise Bike</option>
+                        <option value="bench">Weight Bench</option>
+                        <option value="gym">Home Gym System</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="reason">Reason for Return</label>
+                    <select id="reason" required>
+                        <option value="">Select reason</option>
+                        <option value="defective">Defective Product</option>
+                        <option value="wrong">Wrong Item Received</option>
+                        <option value="damaged">Damaged in Transit</option>
+                        <option value="not-satisfied">Not Satisfied</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="details">Additional Details</label>
+                    <textarea id="details" placeholder="Please provide more details about your return request"></textarea>
+                </div>
+                <button type="submit" class="submit-button">Submit Return Request</button>
+            </form>
+        </div>
+
+        <div class="return-policy">
+            <h2>Return Policy Highlights</h2>
+            <ul>
+                <li>Returns must be initiated within 30 days of delivery</li>
+                <li>Product must be in original condition with all packaging</li>
+                <li>Return shipping costs are covered by the customer</li>
+                <li>Refunds are processed within 5-7 business days after inspection</li>
+                <li>Assembly service fees are non-refundable</li>
+            </ul>
+        </div>
+    </div>
+        <script>
+                function submitReturn(event) {
+                    event.preventDefault();
+                    
+                    const orderNumber = document.getElementById('order-number').value;
+                    const email = document.getElementById('email').value;
+                    const product = document.getElementById('product').value;
+                    const reason = document.getElementById('reason').value;
+                    const details = document.getElementById('details').value;
+                    
+                    // Validate order number format (14 digits)
+                    const orderNumberRegex = /^\d{14}$/;
+                    if (!orderNumberRegex.test(orderNumber)) {
+                        alert('Please enter a valid 14-digit order number');
+                        return;
+                    }
+        
+                    // Show loading state
+                    const submitButton = event.target.querySelector('.submit-button');
+                    const originalText = submitButton.textContent;
+                    submitButton.disabled = true;
+                    submitButton.textContent = 'Sending...';
+        
+                    // Get the selected product and reason text
+                    const productSelect = document.getElementById('product');
+                    const reasonSelect = document.getElementById('reason');
+                    const selectedProduct = productSelect.options[productSelect.selectedIndex].text;
+                    const selectedReason = reasonSelect.options[reasonSelect.selectedIndex].text;
+        
+                    // Prepare email parameters
+                    const templateParams = {
+                        to_name: "Refined Fitness",
+                        from_email: email,
+                        order_number: orderNumber,
+                        product: selectedProduct,
+                        reason: selectedReason,
+                        details: details,
+                        message: `Return Request Details:\n\nOrder Number: ${orderNumber}\nProduct: ${selectedProduct}\nReason: ${selectedReason}\n\nAdditional Details:\n${details}`
+                    };
+        
+                    // Send email using EmailJS
+                    emailjs.send('service_s0mumih', 'template_6fqe6yt', templateParams)
+                    
+                        .then(function() {
+                            alert('Return request submitted successfully!');
+                            event.target.reset();
+                        })
+                        .catch(function(error) {
+                            alert('Failed to submit return request. Please try again.');
+                            console.error('EmailJS Error:', error);
+                        })
+                        .finally(function() {
+                            submitButton.disabled = false;
+                            submitButton.textContent = originalText;
+                        });
+                }
+            </script>
+
+
+</body>
+</html>

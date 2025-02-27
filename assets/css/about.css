@@ -1,0 +1,522 @@
+/* Add these at the beginning of the file */
+* {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.about-container {
+    padding: 120px 5% 50px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    overflow-x: hidden;
+    width: 100%;
+}
+
+/* Update media queries */
+@media (max-width: 768px) {
+    .about-container {
+        padding: 100px 15px 30px;
+    }
+
+    .hero-section {
+        margin: 0 15px 40px;
+    }
+
+    .mission-content,
+    .values-grid,
+    .team-grid,
+    .achievements-grid {
+        margin: 0 15px;
+        width: calc(100% - 30px);
+    }
+
+    .team-member {
+        margin: 0;
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-container {
+        padding: 90px 10px 20px;
+    }
+
+    .hero-section {
+        margin: 0 10px 30px;
+    }
+
+    .mission-content,
+    .values-grid,
+    .team-grid,
+    .achievements-grid {
+        margin: 0 10px;
+        width: calc(100% - 20px);
+    }
+}
+.hero-section {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../images/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    border-radius: 30px;
+    margin-bottom: 60px;
+}
+
+.hero-section h1,
+.mission-section h2,
+.values-section h2,
+.team-section h2,
+.achievements-section h2 {
+    position: relative;
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    background: linear-gradient(120deg, #274fae, #ae2727, #1a3875);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    font-weight: 800;
+    margin-bottom: 40px;
+    animation: shine 3s ease-in-out infinite;
+}
+
+.hero-section h1::after,
+.mission-section h2::after,
+.values-section h2::after,
+.team-section h2::after,
+.achievements-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(90deg, #274fae, #ae2727);
+    border-radius: 2px;
+    opacity: 0.8;
+}
+
+@keyframes shine {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.hero-section h1::before,
+.mission-section h2::before,
+.values-section h2::before,
+.team-section h2::before,
+.achievements-section h2::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(39, 79, 174, 0.1) 0%, transparent 70%);
+    filter: blur(10px);
+    z-index: -1;
+    animation: pulse 3s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(0.95); opacity: 0.5; }
+    50% { transform: scale(1.05); opacity: 0.8; }
+    100% { transform: scale(0.95); opacity: 0.5; }
+}
+
+@media (max-width: 768px) {
+    .hero-section h1::after,
+    .mission-section h2::after,
+    .values-section h2::after,
+    .team-section h2::after,
+    .achievements-section h2::after {
+        width: 80px;
+        height: 3px;
+    }
+}
+.mission-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.mission-content h2 {
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    color: #274fae;
+    margin-bottom: 30px;
+}
+
+/* Hero Section Paragraph */
+.hero-section .subtitle {
+    font-size: clamp(1.1rem, 2vw, 1.3rem);
+    line-height: 1.8;
+    max-width: 900px;
+    margin: 30px auto 0;
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* Mission Section Paragraph */
+.mission-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 25px;
+    padding: 15px;
+    background: linear-gradient(135deg, rgba(39, 79, 174, 0.05), rgba(174, 39, 39, 0.05));
+    border-radius: 15px;
+    transform: translateY(20px);
+    opacity: 0;
+    animation: fadeIn 0.6s ease-out forwards;
+}
+
+/* Value Cards Paragraph */
+.value-card p {
+    color: #666;
+    line-height: 1.6;
+    font-size: 1.05rem;
+    margin-top: 15px;
+    padding: 10px;
+    background: linear-gradient(to right, rgba(39, 79, 174, 0.03), rgba(39, 79, 174, 0.08));
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.value-card:hover p {
+    color: #333;
+    transform: translateY(-5px);
+    background: linear-gradient(to right, rgba(39, 79, 174, 0.08), rgba(39, 79, 174, 0.12));
+}
+
+/* Team Member Paragraphs */
+.team-member .position,
+.team-member .bio {
+    padding: 8px 20px;
+    transition: all 0.3s ease;
+}
+
+.team-member .position {
+    color: #274fae;
+    font-weight: 600;
+    font-size: 1.1rem;
+    background: linear-gradient(45deg, rgba(39, 79, 174, 0.08), transparent);
+    border-radius: 8px;
+    margin: 5px 20px;
+}
+
+.team-member .bio {
+    color: #666;
+    line-height: 1.6;
+    font-size: 1rem;
+    background: linear-gradient(45deg, transparent, rgba(39, 79, 174, 0.05));
+    border-radius: 8px;
+    margin: 5px 20px 20px;
+}
+
+.team-member:hover .position {
+    color: #1a3875;
+    transform: translateX(5px);
+}
+
+.team-member:hover .bio {
+    color: #444;
+    transform: translateX(5px);
+}
+
+/* Achievement Cards Paragraph */
+.achievement-card p {
+    color: #666;
+    font-size: 1.1rem;
+    margin-top: 10px;
+    padding: 8px;
+    background: linear-gradient(135deg, rgba(39, 79, 174, 0.05), transparent);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.achievement-card:hover p {
+    color: #274fae;
+    transform: translateY(-3px);
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@media (max-width: 768px) {
+    .hero-section .subtitle,
+    .mission-content p {
+        font-size: 1rem;
+        padding: 15px;
+    }
+
+    .value-card p,
+    .team-member .bio,
+    .achievement-card p {
+        font-size: 0.95rem;
+        padding: 8px;
+    }
+}
+.mission-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 30px 0;
+}
+
+.mission-content li {
+    position: relative;
+    padding: 15px 25px;
+    margin-bottom: 15px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    border-left: 4px solid #274fae;
+}
+
+.mission-content li::before {
+    content: '✓';
+    position: absolute;
+    left: 8px;
+    color: #274fae;
+    font-weight: bold;
+    background: linear-gradient(45deg, #274fae, #1a3875);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.mission-content li:hover {
+    transform: translateX(10px);
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 8px 20px rgba(39, 79, 174, 0.1);
+    border-left-width: 8px;
+}
+
+@media (max-width: 768px) {
+    .mission-content li {
+        padding: 12px 20px;
+        margin-bottom: 10px;
+    }
+}
+.values-section {
+    padding: 60px 0;
+}
+
+.values-section h2 {
+    text-align: center;
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    color: #274fae;
+    margin-bottom: 50px;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 20px;
+}
+
+.value-card {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.value-card:hover {
+    transform: translateY(-10px);
+}
+
+.value-card .icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.value-card h3 {
+    color: #274fae;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.team-section {
+    padding: 60px 0;
+}
+
+.team-section h2 {
+    text-align: center;
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    color: #274fae;
+    margin-bottom: 50px;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+    padding: 20px;
+}
+
+.team-member {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-10px);
+}
+
+.member-image {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+.member-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.team-member:hover .member-image img {
+    transform: scale(1.1);
+}
+
+.team-member h3 {
+    padding: 20px 20px 10px;
+    color: #274fae;
+    font-size: 1.3rem;
+}
+
+.team-member .position {
+    padding: 0 20px;
+    color: #666;
+    font-weight: 600;
+}
+
+.team-member .bio {
+    padding: 10px 20px 20px;
+    color: #777;
+}
+
+.achievements-section {
+    padding: 60px 0;
+}
+
+.achievements-section h2 {
+    text-align: center;
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    color: #274fae;
+    margin-bottom: 50px;
+}
+
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    padding: 20px;
+}
+
+.achievement-card {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.achievement-card h3 {
+    font-size: 2.5rem;
+    color: #274fae;
+    margin-bottom: 10px;
+}
+
+.achievement-card p {
+    color: #666;
+    font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+    .about-container {
+        padding: 100px 4% 30px;
+    }
+
+    .hero-section {
+        padding: 40px 20px;
+        margin-bottom: 40px;
+    }
+
+    .mission-content {
+        padding: 30px;
+    }
+
+    .values-grid,
+    .team-grid,
+    .achievements-grid {
+        gap: 20px;
+    }
+
+    .member-image {
+        height: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .value-card,
+    .achievement-card {
+        padding: 20px;
+    }
+
+    .team-member {
+        margin: 0 10px;
+    }
+
+    .member-image {
+        height: 200px;
+    }
+}
+.value-card .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.value-card .icon svg {
+    width: 48px;
+    height: 48px;
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+    transition: all 0.3s ease;
+}
+
+.value-card:hover .icon svg {
+    transform: scale(1.1);
+    filter: drop-shadow(0 6px 8px rgba(0, 0, 0, 0.15));
+}

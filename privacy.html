@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Refined Fitness</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/privacy.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="logo-container">
+        <nav class="main-nav">
+            <div class="logo">
+                <h1>Refined<span> Fitness</span></h1>
+                <p class="tagline">Improving The Quality Of Your Life</p>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="products.html">Products</a>
+                <a href="projects.html">Projects</a>
+                <a href="support.html">Support</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="privacy-container">
+        <section class="privacy-hero">
+            <h1>Privacy Policy</h1>
+            <p>Last updated: January 15, 2024</p>
+        </section>
+
+        <section class="privacy-content">
+            <div class="policy-section">
+                <h2>Information We Collect</h2>
+                <p>We collect information that you provide directly to us, including:</p>
+                <ul>
+                    <li>Name and contact information</li>
+                    <li>Billing and shipping addresses</li>
+                    <li>Payment information</li>
+                    <li>Purchase history</li>
+                    <li>Communication preferences</li>
+                </ul>
+            </div>
+
+            <div class="policy-section">
+                <h2>How We Use Your Information</h2>
+                <p>We use the information we collect to:</p>
+                <ul>
+                    <li>Process your orders and payments</li>
+                    <li>Communicate with you about products and services</li>
+                    <li>Provide customer support</li>
+                    <li>Send important updates about your purchases</li>
+                    <li>Improve our products and services</li>
+                </ul>
+            </div>
+
+            <div class="policy-section">
+                <h2>Information Sharing</h2>
+                <p>We do not sell or rent your personal information to third parties. We may share your information with:</p>
+                <ul>
+                    <li>Service providers who assist in our operations</li>
+                    <li>Payment processors for secure transactions</li>
+                    <li>Shipping partners for order delivery</li>
+                </ul>
+            </div>
+
+            <div class="policy-section">
+                <h2>Data Security</h2>
+                <p>We implement appropriate security measures to protect your personal information, including:</p>
+                <ul>
+                    <li>Encryption of sensitive data</li>
+                    <li>Secure server infrastructure</li>
+                    <li>Regular security assessments</li>
+                    <li>Limited access to personal information</li>
+                </ul>
+            </div>
+
+            <div class="policy-section">
+                <h2>Your Rights</h2>
+                <p>You have the right to:</p>
+                <ul>
+                    <li>Access your personal information</li>
+                    <li>Correct inaccurate data</li>
+                    <li>Request deletion of your information</li>
+                    <li>Opt-out of marketing communications</li>
+                </ul>
+            </div>
+
+            <div class="policy-section">
+                <h2>Contact Us</h2>
+                <p>If you have questions about our privacy policy, please contact us at:</p>
+                <div class="contact-details">
+                    <p>Email: privacy@refinedfitness.com</p>
+                    <p>Phone: +256 782 155 626</p>
+                    <p>Address: Buwaate, Kampala, Uganda</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Add Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <script src="assets/js/menu.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const date = new Date();
+            date.setDate(date.getDate() - 1);
+            
+            const options = { year: 'numeric', month: 'long', day: 'numeric' };
+            const formattedDate = date.toLocaleDateString('en-US', options);
+            
+            const lastUpdated = document.querySelector('.privacy-hero p');
+            if (lastUpdated) {
+                lastUpdated.textContent = `Last updated: ${formattedDate}`;
+            }
+        });
+    </script>
+    </body>
+</html>

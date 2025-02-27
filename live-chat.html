@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Chat - Refined Fitness</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/live-chat.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="logo-container">
+        <!-- Standard navigation header -->
+        <nav class="main-nav">
+            <div class="logo">
+                <h1>Refined<span> Fitness</span></h1>
+                <p class="tagline">Improving The Quality Of Your Life</p>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="products.html">Products</a>
+                <a href="projects.html">Projects</a>
+                <a href="support.html">Support</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="chat-container">
+        <div class="chat-wrapper">
+            <div class="chat-header">
+                <div class="agent-info">
+                    <div class="agent-avatar">
+                        <img src="assets/images/support-agent.jpg" alt="Support Agent">
+                        <span class="status-indicator online"></span>
+                    </div>
+                    <div class="agent-details">
+                        <h3>Customer Support</h3>
+                        <p>Typically replies in 2 minutes</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="chat-messages" id="chatMessages">
+                <div class="message system">
+                    <p>Welcome to Refined Fitness Support! How can we help you today?</p>
+                    <span class="timestamp">Just now</span>
+                </div>
+            </div>
+
+            <div class="chat-input">
+                <div class="input-wrapper">
+                    <textarea id="messageInput" placeholder="Type your message..." rows="1"></textarea>
+                    <div class="input-actions">
+                        <button class="attach-btn">
+                            <i class="fas fa-paperclip"></i>
+                        </button>
+                        <button class="send-btn" id="sendMessage">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="chat-sidebar">
+            <div class="quick-actions">
+                <h3>Quick Actions</h3>
+                <button class="action-btn" data-action="order">
+                    <i class="fas fa-box"></i>
+                    Track Order
+                </button>
+                <button class="action-btn" data-action="return">
+                    <i class="fas fa-undo"></i>
+                    Start Return
+                </button>
+                <button class="action-btn" data-action="warranty">
+                    <i class="fas fa-shield-alt"></i>
+                    Warranty Info
+                </button>
+            </div>
+
+            <div class="faq-section">
+                <h3>Common Questions</h3>
+                <div class="faq-links">
+                    <a href="shipping.html" class="faq-link">Shipping Times</a>
+                    <a href="assembly-guides.html" class="faq-link">Assembly Instructions</a>
+                    <a href="payment-terms.html" class="faq-link">Payment Methods</a>
+                    <a href="returns.html" class="faq-link">Return Policy</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer start -->
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <h2>Refined<span> Fitness</span></h2>
+                    <p>Improving The Quality Of Your Life</p>
+                </div>
+                <div class="social-links">
+                    <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="support.html">Support</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            
+            <!-- Update the assembly link in the footer section -->
+            <div class="footer-section">
+                <h3>Support</h3>
+                <ul class="footer-links">
+                    <li><a href="shipping.html">Shipping Info</a></li>
+                    <li><a href="returns.html">Returns & Refunds</a></li>
+                    <li><a href="faqs.html">FAQs</a></li>
+                    <li><a href="assembly-guides.html">Assembly Guides</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <ul class="contact-info">
+                    <li><i class="fas fa-map-marker-alt"></i>Buwaate. Kampala, Uganda</li>
+                    <li><i class="fas fa-phone"></i>+256 782 155 626</li>
+                    <li><i class="fas fa-envelope"></i> support@refinedfitness.com</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 Refined Fitness. All rights reserved.</p>
+            <div class="legal-links">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+<!-- Footer end -->
+
+    <script src="assets/js/menu.js"></script>
+    <script src="assets/js/live-chat.js"></script>
+    <!-- Add before closing body tag -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("ry-BoOClBJSvulKCj");
+        })();
+    </script>
+    <script src="assets/js/menu.js"></script>
+    <script src="assets/js/live-chat.js"></script>
+    <script src="assets/js/agent-chat.js"></script>
+</body>
+</html>

@@ -1,0 +1,170 @@
+.payment-terms-container {
+    padding: 120px 5% 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Update existing styles */
+.payment-terms-container h1 {
+    text-align: center;
+    color: #274fae;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+    font-weight: 800;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.payment-terms-container h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: #274fae;
+    border-radius: 2px;
+}
+
+.payment-section h2 {
+    color: #274fae;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #eee;
+    position: relative;
+}
+
+.payment-section h2::before {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 60px;
+    height: 2px;
+    background: #274fae;
+}
+
+.method-header h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+}
+
+.payment-method li {
+    padding: 0.8rem 0;
+    border-bottom: 1px solid #eee;
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.terms-list h3 {
+    color: #274fae;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 1.5rem 0 1rem;
+    padding-left: 1rem;
+    border-left: 4px solid #274fae;
+}
+
+.terms-list li {
+    padding: 0.8rem 0;
+    border-bottom: 1px solid #eee;
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Add emphasis for important text */
+.payment-method li strong,
+.terms-list li strong {
+    color: #274fae;
+    font-weight: 600;
+}
+
+/* Add hover effects */
+.payment-method:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(39, 79, 174, 0.1);
+    transition: all 0.3s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .payment-terms-container h1 {
+        font-size: 2rem;
+    }
+
+    .payment-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .method-header h3 {
+        font-size: 1.2rem;
+    }
+
+    .payment-method li,
+    .terms-list li {
+        font-size: 1rem;
+    }
+}
+
+.payment-method ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.payment-method li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.payment-method li:last-child {
+    border-bottom: none;
+}
+
+.terms-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.terms-list h3 {
+    color: #274fae;
+    margin-bottom: 1rem;
+}
+
+.terms-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.terms-list li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.terms-list li:last-child {
+    border-bottom: none;
+}
+
+@media (max-width: 768px) {
+    .payment-terms-container {
+        padding: 100px 20px 30px;
+    }
+
+    .payment-section {
+        padding: 1.5rem;
+    }
+
+    .terms-list {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}

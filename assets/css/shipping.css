@@ -1,0 +1,267 @@
+.shipping-container {
+    padding: 120px 5% 50px;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.hero-section {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../images/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    border-radius: 30px;
+    margin-bottom: 60px;
+}
+
+.hero-section h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    color: white;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.shipping-container h2 {
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    color: #274fae;
+    margin: 2.5rem 0 1.5rem;
+    text-align: center;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.shipping-container h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, #274fae, #ae2727);
+    border-radius: 2px;
+}
+
+.shipping-container h3 {
+    font-size: clamp(1.2rem, 2vw, 1.5rem);
+    color: #333;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.hero-section p {
+    font-size: clamp(1.1rem, 2vw, 1.3rem);
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.shipping-card p {
+    color: #555;
+    line-height: 1.8;
+    margin: 1rem 0;
+    font-size: 1.1rem;
+}
+
+.area-card p {
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    font-style: italic;
+}
+
+.faq-item p {
+    color: #555;
+    line-height: 1.7;
+    font-size: 1rem;
+    padding: 0.5rem 0;
+}
+
+.price {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(1.8rem, 3vw, 2.2rem);
+    font-weight: 700;
+    background: linear-gradient(90deg, #274fae, #ae2727);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 1rem 0;
+}
+
+@media (max-width: 768px) {
+    .shipping-container h2 {
+        font-size: 1.8rem;
+        margin: 2rem 0 1rem;
+    }
+
+    .shipping-card p,
+    .area-card p {
+        font-size: 0.95rem;
+    }
+
+    .price {
+        font-size: 1.6rem;
+    }
+}
+
+.shipping-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.tab-btn {
+    padding: 12px 30px;
+    border: 2px solid #274fae;
+    border-radius: 30px;
+    background: none;
+    color: #274fae;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tab-btn.active {
+    background: #274fae;
+    color: white;
+}
+
+.shipping-category {
+    display: none;
+}
+
+.shipping-category.active {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    animation: fadeIn 0.5s ease;
+}
+
+.shipping-card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.shipping-card:hover {
+    transform: translateY(-5px);
+}
+
+.shipping-card.premium {
+    border: 2px solid #274fae;
+}
+
+.badge {
+    position: absolute;
+    top: -12px;
+    right: 20px;
+    background: #274fae;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+.price {
+    font-size: 2rem;
+    color: #274fae;
+    font-weight: 700;
+    margin: 15px 0;
+}
+
+.shipping-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.shipping-card ul li {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 25px;
+}
+
+.shipping-card ul li:before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #274fae;
+}
+
+.area-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.area-card {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.area-card h3 {
+    color: #274fae;
+    margin-bottom: 15px;
+}
+
+.area-card ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+.area-card ul li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.faq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.faq-item {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.faq-item h3 {
+    color: #274fae;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+    .shipping-tabs {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tab-btn {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .price {
+        font-size: 1.8rem;
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}

@@ -1,0 +1,547 @@
+/* Add at the beginning of the file */
+.logo-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    padding: 1rem 2rem;
+}
+
+.logo {
+    text-align: center;
+    position: relative;
+}
+
+.tagline {
+    color: rgba(255, 255, 255, 0.8);
+    margin: 1.5rem 0 0;
+    font-size: 1rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.tagline::before {
+    content: '';
+    position: absolute;
+    top: -0.75rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 5px;
+    background-color: #ae2727;
+    animation: lineWidth 10s ease-in-out infinite;
+}
+
+@keyframes lineWidth {
+    0% { width: 250px; }
+    50% { width: 420px; }
+    100% { width: 250px; }
+}
+
+.logo h1 {
+    font-size: 2.5rem;
+    color: #274fae;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin: 0;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px rgba(39, 79, 174, 0.3);
+    animation: glowEffect 2s ease-in-out infinite;
+}
+
+@keyframes glowEffect {
+    0% {
+        text-shadow: 0 0 10px rgba(39, 79, 174, 0.3);
+    }
+    50% {
+        text-shadow: 0 0 20px rgba(39, 79, 174, 0.5),
+                     0 0 30px rgba(39, 79, 174, 0.3);
+    }
+    100% {
+        text-shadow: 0 0 10px rgba(39, 79, 174, 0.3);
+    }
+}
+
+.logo h1 span {
+    color: #274fae;
+    font-weight: 800;
+}
+
+.tagline {
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0.5rem 0 0;
+    font-size: 1rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+/* Add responsive styles */
+@media (max-width: 768px) {
+    .logo h1 {
+        font-size: 2rem;
+    }
+    
+    .tagline {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-container {
+        padding: 0.8rem 1rem;
+    }
+    
+    .logo h1 {
+        font-size: 1.5rem;
+    }
+    
+    .tagline {
+        font-size: 0.7rem;
+        letter-spacing: 2px;
+    }
+
+    .tagline::before {
+        
+        height: 2px;
+        top: -0.5rem;
+        
+    }
+
+    @keyframes lineWidth {
+        0% { width: 200px; }
+        50% { width: 300px; }
+        100% { width: 200px; }
+    }
+}
+
+/* Update existing swiper class to account for header */
+.swiper {
+    margin-top: 0;
+    height: 100vh;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    background-color: #f5f5f5;
+}
+
+.logo h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin: 0;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px rgba(39, 79, 174, 0.3);
+    animation: glowEffect 2s ease-in-out infinite;
+}
+
+@keyframes glowEffect {
+    0% {
+        text-shadow: 0 0 10px rgba(39, 79, 174, 0.3);
+    }
+    50% {
+        text-shadow: 0 0 20px rgba(39, 79, 174, 0.5),
+                     0 0 30px rgba(39, 79, 174, 0.3);
+    }
+    100% {
+        text-shadow: 0 0 10px rgba(39, 79, 174, 0.3);
+    }
+}
+
+.logo h1 span {
+    color: #274fae;
+    font-weight: 800;
+}
+
+.tagline {
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0.5rem 0 0;
+    font-size: 1rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+/* Add responsive styles */
+@media (max-width: 768px) {
+    .logo h1 {
+        font-size: 2rem;
+    }
+    
+    .tagline {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-container {
+        padding: 0.8rem 1rem;
+    }
+    
+    .logo h1 {
+        font-size: 1.5rem;
+    }
+    
+    .tagline {
+        font-size: 0.7rem;
+        letter-spacing: 2px;
+    }
+
+    .tagline::before {
+        
+        height: 2px;
+        top: -0.5rem;
+        
+    }
+
+    @keyframes lineWidth {
+        0% { width: 200px; }
+        50% { width: 300px; }
+        100% { width: 200px; }
+    }
+}
+
+/* Update existing swiper class to account for header */
+.swiper {
+    margin-top: 0;
+    height: 100vh;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+.swiper {
+    width: 100%;
+    height: 80vh;
+}
+
+.swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.nav-button {
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: white;
+}
+
+.indoor-btn {
+    background-color: #2c3e50;
+}
+
+.outdoor-btn {
+    background-color: #ae2727;
+}
+
+.nav-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Enhanced Responsive Design */
+.swiper {
+    width: 100%;
+    height: 100vh;
+}
+
+/* Enhanced Slide Animations */
+.swiper-slide {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: all 0.8s ease;
+}
+
+.swiper-slide-active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.swiper-slide img {
+    filter: brightness(0.8);
+    transition: filter 0.5s ease;
+}
+
+.swiper-slide-active img {
+    filter: brightness(1);
+}
+
+/* Enhanced Button Styles */
+.button-container {
+    position: fixed;
+    bottom: 2rem;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+}
+
+.nav-button {
+    position: relative;
+    padding: 1.2rem 3rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 50px;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.indoor-btn {
+    background: linear-gradient(45deg, #274fae, #1a3875);
+    color: white;
+}
+
+.outdoor-btn {
+    background: linear-gradient(45deg, #ae2727, #751a1a);
+    color: white;
+}
+
+.nav-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255, 255, 255, 0.3),
+        transparent
+    );
+    transition: all 0.6s;
+}
+
+.nav-button:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.nav-button:hover::before {
+    left: 100%;
+}
+
+.nav-button:active {
+    transform: translateY(-1px) scale(0.98);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Button hover state glow effect */
+.indoor-btn:hover {
+    box-shadow: 0 8px 25px rgba(39, 79, 174, 0.4);
+}
+
+.outdoor-btn:hover {
+    box-shadow: 0 8px 25px rgba(174, 39, 39, 0.4);
+}
+
+.nav-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    transition: transform 0.6s ease;
+}
+
+.nav-button:hover::before {
+    transform: translateX(100%);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .button-container {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1.5rem;
+    }
+
+    .nav-button {
+        width: 100%;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        transform: scale(0.8);
+    }
+}
+
+@media (max-width: 480px) {
+    .swiper {
+        height: 80vh;
+    }
+}
+
+/* Custom Navigation Buttons */
+.swiper-button-next,
+.swiper-button-prev {
+    background: rgba(255, 255, 255, 0.2);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1);
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    font-size: 1.5rem;
+    color: white;
+}
+
+/* Custom Pagination */
+.swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background: rgba(255, 255, 255, 0.5);
+    transition: all 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+    background: white;
+    transform: scale(1.2);
+}
+/* Add these new styles */
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 2rem;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+.nav-links a.active {
+    background: linear-gradient(45deg, #274fae, #1a3875);
+    box-shadow: 0 4px 15px rgba(39, 79, 174, 0.3);
+}
+
+.menu-btn {
+    display: none;
+    flex-direction: column;
+    gap: 8px;
+    cursor: pointer;
+    padding: 8px;
+    margin-right: 15px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.menu-btn span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background: white;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        top: 80px;
+        right: -100%;
+        flex-direction: column;
+        background: rgba(35, 35, 35, 0.9);
+        backdrop-filter: blur(10px);
+        width: 100%;
+        text-align: center;
+        padding: 2rem;
+        transition: 0.3s ease;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .menu-btn {
+        display: flex;
+    }
+
+    .menu-btn.active span:nth-child(1) {
+        transform: rotate(45deg) translate(8px, 8px);
+    }
+
+    .menu-btn.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-btn.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -7px);
+    }
+}

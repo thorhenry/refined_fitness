@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Returns & Refunds - Refined Fitness</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/returns.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="logo-container">
+        <nav class="main-nav">
+            <div class="logo">
+                <h1>Refined<span> Fitness</span></h1>
+                <p class="tagline">Improving The Quality Of Your Life</p>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="products.html">Products</a>
+                <a href="projects.html">Projects</a>
+                <a href="support.html">Support</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="returns-container">
+        <section class="hero-section">
+            <h1>Returns & Refunds</h1>
+            <p>Easy and hassle-free returns for your fitness equipment</p>
+        </section>
+
+        <section class="returns-process">
+            <h2>How to Return Your Equipment</h2>
+            <div class="process-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Initiate Return</h3>
+                    <p>Contact our support team within 30 days of purchase</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Package Item</h3>
+                    <p>Securely pack in original packaging with all accessories</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Ship Back</h3>
+                    <p>Use our provided return label or arrange pickup</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Refund</h3>
+                    <p>Receive refund within 5-7 business days after inspection</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="returns-policy">
+            <div class="policy-tabs">
+                <button class="tab-btn active" data-category="indoor">Indoor Equipment</button>
+                <button class="tab-btn" data-category="outdoor">Outdoor Equipment</button>
+            </div>
+
+            <div class="policy-content">
+                <div class="policy-category active" id="indoor-policy">
+                    <div class="policy-card">
+                        <h3>Return Window</h3>
+                        <ul>
+                            <li>30-day return period from delivery date</li>
+                            <li>Must be in original condition</li>
+                            <li>All accessories and manuals included</li>
+                            <li>Original packaging required</li>
+                        </ul>
+                    </div>
+                    <div class="policy-card">
+                        <h3>Refund Terms</h3>
+                        <ul>
+                            <li>Full refund minus shipping costs</li>
+                            <li>15% restocking fee for assembled items</li>
+                            <li>Original payment method refund</li>
+                            <li>Processing time: 5-7 business days</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="policy-category" id="outdoor-policy">
+                    <div class="policy-card">
+                        <h3>Return Window</h3>
+                        <ul>
+                            <li>14-day return period from delivery date</li>
+                            <li>Must be uninstalled and unassembled</li>
+                            <li>No signs of outdoor exposure or use</li>
+                            <li>Original packaging required</li>
+                        </ul>
+                    </div>
+                    <div class="policy-card">
+                        <h3>Refund Terms</h3>
+                        <ul>
+                            <li>Full refund minus shipping and installation costs</li>
+                            <li>20% restocking fee for custom orders</li>
+                            <li>Original payment method refund</li>
+                            <li>Processing time: 7-10 business days</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="initiate-return">
+            <h2>Start Your Return</h2>
+            <form class="return-form" id="returnForm">
+                <div class="form-group">
+                    <label for="orderNumber">Order Number</label>
+                    <input type="text" 
+                           id="orderNumber" 
+                           required 
+                           placeholder="Enter your digit order number"
+                           maxlength="14"
+                           pattern="\d{14}"
+                           title="Please enter a valid 14-digit order number">
+                </div>
+                <div class="form-group">
+                    <label for="reason">Reason for Return</label>
+                    <select id="reason" required>
+                        <option value="">Select a reason</option>
+                        <option value="defective">Defective Product</option>
+                        <option value="wrong">Wrong Item Received</option>
+                        <option value="notneeded">No Longer Needed</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="comments">Additional Comments</label>
+                    <textarea id="comments"></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Submit Return Request</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer start -->
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <h2>Refined<span> Fitness</span></h2>
+                    <p>Improving The Quality Of Your Life</p>
+                </div>
+                <div class="social-links">
+                    <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="support.html">Support</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            
+            <!-- Update the assembly link in the footer section -->
+            <div class="footer-section">
+                <h3>Support</h3>
+                <ul class="footer-links">
+                    <li><a href="shipping.html">Shipping Info</a></li>
+                    <li><a href="returns.html">Returns & Refunds</a></li>
+                    <li><a href="faqs.html">FAQs</a></li>
+                    <li><a href="assembly-guides.html">Assembly Guides</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <ul class="contact-info">
+                    <li><i class="fas fa-map-marker-alt"></i>Buwaate. Kampala, Uganda</li>
+                    <li><i class="fas fa-phone"></i>+256 782 155 626</li>
+                    <li><i class="fas fa-envelope"></i> support@refinedfitness.com</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 Refined Fitness. All rights reserved.</p>
+            <div class="legal-links">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+<!-- Footer end -->
+
+    <script src="assets/js/menu.js"></script>
+    <!-- Add before closing body tag -->
+    <script src="assets/js/returns.js"></script>
+</body>
+</html>

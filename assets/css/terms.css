@@ -1,0 +1,136 @@
+.terms-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    margin-top: 120px;
+}
+
+.terms-hero {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, rgba(39, 79, 174, 0.1), rgba(174, 39, 39, 0.1));
+    border-radius: 10px;
+    margin-bottom: 3rem;
+}
+
+.terms-hero h1 {
+    font-size: 2.5rem;
+    color: #274fae;
+    margin-bottom: 1rem;
+}
+
+.terms-hero p {
+    color: #666;
+    font-size: 1.1rem;
+}
+
+.terms-content {
+    display: grid;
+    gap: 3rem;
+}
+
+.terms-section {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transform: translateY(20px);
+    opacity: 0;
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.terms-section:nth-child(2) { animation-delay: 0.2s; }
+.terms-section:nth-child(3) { animation-delay: 0.4s; }
+.terms-section:nth-child(4) { animation-delay: 0.6s; }
+.terms-section:nth-child(5) { animation-delay: 0.8s; }
+.terms-section:nth-child(6) { animation-delay: 1s; }
+.terms-section:nth-child(7) { animation-delay: 1.2s; }
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.terms-section h2 {
+    color: #274fae;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.terms-section h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 2px;
+    background: linear-gradient(90deg, #274fae, #ae2727);
+}
+
+.terms-section p {
+    color: #444;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.terms-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.terms-section ul li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.8rem;
+    color: #555;
+}
+
+.terms-section ul li::before {
+    content: '•';
+    color: #274fae;
+    position: absolute;
+    left: 0;
+    font-size: 1.2rem;
+}
+
+.contact-details {
+    background: rgba(39, 79, 174, 0.05);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+.contact-details p {
+    margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .terms-hero {
+        padding: 3rem 1rem;
+    }
+
+    .terms-hero h1 {
+        font-size: 2rem;
+    }
+
+    .terms-section {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .terms-container {
+        padding: 1rem;
+    }
+
+    .terms-hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .terms-section h2 {
+        font-size: 1.4rem;
+    }
+}

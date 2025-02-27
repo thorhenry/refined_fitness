@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outdoor Gym Setup Guide - Refined Fitness</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <style>
+        /* Add gradient background and enhanced styling */
+        body {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            min-height: 100vh;
+        }
+
+        .guide-container {
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            background: linear-gradient(120deg, #274fae, #ae2727);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            position: relative;
+            padding-bottom: 20px;
+        }
+
+        h1::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, #274fae, #ae2727);
+            border-radius: 2px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+            padding: 30px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid rgba(39, 79, 174, 0.1);
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(39, 79, 174, 0.15);
+        }
+
+        h2 {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #274fae;
+        }
+
+        h2::before {
+            content: '';
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            background: linear-gradient(135deg, #274fae, #ae2727);
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .illustration {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            transition: transform 0.3s ease;
+        }
+
+        .illustration:hover {
+            transform: scale(1.02);
+        }
+
+        .checklist {
+            background: linear-gradient(135deg, #f8f9fa, #ffffff);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 20px 0;
+            border: 1px solid rgba(39, 79, 174, 0.1);
+        }
+
+        .checklist li {
+            margin: 15px 0;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .checklist li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #274fae;
+            font-weight: bold;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            margin: 20px 0;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        th {
+            background: linear-gradient(90deg, #274fae, #1a3875);
+            color: white;
+            padding: 15px;
+            font-weight: 600;
+        }
+
+        td {
+            padding: 15px;
+            background: white;
+            border-bottom: 1px solid #eee;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        tr:hover td {
+            background: #f8f9fa;
+        }
+
+                /* Add these styles to the existing <style> section */
+                    p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #444;
+            margin: 20px 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #f8f9fa, #ffffff);
+            border-radius: 10px;
+            border-left: 4px solid #274fae;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+
+        p:hover {
+            transform: translateX(5px);
+            box-shadow: 0 5px 15px rgba(39, 79, 174, 0.15);
+        }
+
+        .measurement {
+            background: linear-gradient(120deg, #274fae20, #ae272720);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 500;
+            color: #274fae;
+        }
+
+        a {
+            color: #274fae;
+            text-decoration: none;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #ae2727;
+        }
+
+        a::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background: linear-gradient(90deg, #274fae, #ae2727);
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.3s ease;
+        }
+
+        a:hover::after {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: linear-gradient(135deg, #274fae, #ae2727);
+            color: white;
+            padding: 15px;
+            border-radius: 50%;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+            cursor: pointer;
+            z-index: 100;
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Add responsive styles for the back-to-top button */
+        @media (max-width: 768px) {
+            .back-to-top {
+                bottom: 20px;
+                right: 20px;
+                padding: 12px;
+            }
+        }
+
+        /* Add smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Add animation for sections */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .section {
+            animation: fadeInUp 0.6s ease-out;
+            animation-fill-mode: both;
+        }
+
+        .section:nth-child(2) { animation-delay: 0.2s; }
+        .section:nth-child(3) { animation-delay: 0.4s; }
+        .section:nth-child(4) { animation-delay: 0.6s; }
+        .section:nth-child(5) { animation-delay: 0.8s; }
+
+        /* Existing responsive styles remain unchanged */
+    </style>
+</head>
+<body>
+    <div class="guide-container">
+        <h1>Outdoor Gym Setup Guide</h1>
+        
+        <div class="section">
+            <h2>1. Site Selection</h2>
+            <img src="../images/guides/site-selection.svg" alt="Site Selection Diagram" class="illustration">
+            <!-- Update list items with measurement spans -->
+                    <ul>
+                        <li>Level ground required (max <span class="measurement">2% slope</span>)</li>
+                        <li>Minimum area: <span class="measurement">15' x 15'</span> (<span class="measurement">4.5m x 4.5m</span>)</li>
+                        <li>Good drainage essential</li>
+                        <li>Consider sun exposure and shade</li>
+                    </ul>
+            
+                    <!-- Update other measurements throughout the document -->
+                    <ol>
+                        <li>Clear vegetation and debris</li>
+                        <li>Level the ground</li>
+                        <li>Add crushed stone base (<span class="measurement">4" depth</span>)</li>
+                        <li>Install rubber matting or artificial turf</li>
+                    </ol>
+            
+                    <!-- Update spacing recommendations -->
+                    <ul>
+                        <li><span class="measurement">6ft</span> between equipment pieces</li>
+                        <li><span class="measurement">8ft</span> clearance for moving parts</li>
+                        <li>Safety zone marking around each station</li>
+                    </ul>
+        </div>
+
+        <div class="section">
+            <h2>2. Surface Preparation</h2>
+            <img src="../images/guides/surface-prep.svg" alt="Surface Preparation Steps" class="illustration">
+            <ol>
+                <li>Clear vegetation and debris</li>
+                <li>Level the ground</li>
+                <li>Add crushed stone base (4" depth)</li>
+                <li>Install rubber matting or artificial turf</li>
+            </ol>
+        </div>
+
+        <div class="section">
+            <h2>3. Equipment Layout</h2>
+            <img src="../images/guides/equipment-layout.svg" alt="Equipment Layout Plan" class="illustration">
+            <p>Recommended spacing:</p>
+            <ul>
+                <li>6ft between equipment pieces</li>
+                <li>8ft clearance for moving parts</li>
+                <li>Safety zone marking around each station</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>4. Installation Requirements</h2>
+            <img src="../images/guides/installation.svg" alt="Installation Details" class="illustration">
+            <div class="checklist">
+                <h3>Installation Checklist:</h3>
+                <ul>
+                    <li>Concrete foundation (minimum 6" depth)</li>
+                    <li>Proper anchoring hardware</li>
+                    <li>Weather-resistant coating</li>
+                    <li>Safety caps on all bolts</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>5. Maintenance Schedule</h2>
+            <table>
+                <tr>
+                    <th>Frequency</th>
+                    <th>Tasks</th>
+                </tr>
+                <tr>
+                    <td>Weekly</td>
+                    <td>Visual inspection, tighten loose parts</td>
+                </tr>
+                <tr>
+                    <td>Monthly</td>
+                    <td>Deep clean, lubricate moving parts</td>
+                </tr>
+                <tr>
+                    <td>Quarterly</td>
+                    <td>Surface inspection, rust prevention</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <!-- Add back to top button -->
+        <a href="#" class="back-to-top" title="Back to Top">↑</a>
+    </div>
+
+    <script>
+        // Show/hide back to top button based on scroll position
+        const backToTop = document.querySelector('.back-to-top');
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTop.style.display = 'block';
+            } else {
+                backToTop.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

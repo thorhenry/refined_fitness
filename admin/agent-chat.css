@@ -1,0 +1,65 @@
+.message-reactions {
+    display: flex;
+    gap: 12px;
+    margin-top: 8px;
+    padding: 4px;
+}
+
+.reaction-btn {
+    background: white;
+    border: 1.5px solid #e0e0e0;
+    border-radius: 20px;
+    padding: 6px 12px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.reaction-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.reaction-btn:active {
+    transform: translateY(0);
+}
+
+.reaction-btn i {
+    font-size: 16px;
+    transition: transform 0.2s ease;
+}
+
+.reaction-btn:hover i {
+    transform: scale(1.2);
+}
+
+.reaction-btn[data-reaction="like"] {
+    color: #0066ff;
+    border-color: #0066ff30;
+}
+
+.reaction-btn[data-reaction="heart"] {
+    color: #ff4444;
+    border-color: #ff444430;
+}
+
+.reaction-btn[data-reaction="star"] {
+    color: #ffbb00;
+    border-color: #ffbb0030;
+}
+
+.reaction-btn[data-reaction="like"]:hover {
+    background: #0066ff10;
+}
+
+.reaction-btn[data-reaction="heart"]:hover {
+    background: #ff444410;
+}
+
+.reaction-btn[data-reaction="star"]:hover {
+    background: #ffbb0010;
+}

@@ -1,0 +1,137 @@
+.privacy-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    margin-top: 120px; /* Add space below header */
+}
+
+.privacy-hero {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, rgba(39, 79, 174, 0.1), rgba(174, 39, 39, 0.1));
+    border-radius: 10px;
+    margin-bottom: 3rem;
+    position: relative; /* Ensure proper stacking */
+    z-index: 1; /* Keep it above other content but below header */
+}
+
+.privacy-hero h1 {
+    font-size: 2.5rem;
+    color: #274fae;
+    margin-bottom: 1rem;
+}
+
+.privacy-hero p {
+    color: #666;
+    font-size: 1.1rem;
+}
+
+.privacy-content {
+    display: grid;
+    gap: 3rem;
+}
+
+.policy-section {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transform: translateY(20px);
+    opacity: 0;
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.policy-section:nth-child(2) { animation-delay: 0.2s; }
+.policy-section:nth-child(3) { animation-delay: 0.4s; }
+.policy-section:nth-child(4) { animation-delay: 0.6s; }
+.policy-section:nth-child(5) { animation-delay: 0.8s; }
+.policy-section:nth-child(6) { animation-delay: 1s; }
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.policy-section h2 {
+    color: #274fae;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.policy-section h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 2px;
+    background: linear-gradient(90deg, #274fae, #ae2727);
+}
+
+.policy-section p {
+    color: #444;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.policy-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.policy-section ul li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.8rem;
+    color: #555;
+}
+
+.policy-section ul li::before {
+    content: '•';
+    color: #274fae;
+    position: absolute;
+    left: 0;
+    font-size: 1.2rem;
+}
+
+.contact-details {
+    background: rgba(39, 79, 174, 0.05);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+.contact-details p {
+    margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .privacy-hero {
+        padding: 3rem 1rem;
+    }
+
+    .privacy-hero h1 {
+        font-size: 2rem;
+    }
+
+    .policy-section {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .privacy-container {
+        padding: 1rem;
+    }
+
+    .privacy-hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .policy-section h2 {
+        font-size: 1.4rem;
+    }
+}

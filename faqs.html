@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQs - Refined Fitness</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/faqs.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="logo-container">
+        <nav class="main-nav">
+            <div class="logo">
+                <h1>Refined<span> Fitness</span></h1>
+                <p class="tagline">Improving The Quality Of Your Life</p>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="products.html">Products</a>
+                <a href="projects.html">Projects</a>
+                <a href="support.html">Support</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="faqs-container">
+        <section class="hero-section">
+            <h1>Frequently Asked Questions</h1>
+            <p>Find answers to common questions about our fitness equipment</p>
+            <div class="search-container">
+                <input type="text" id="faqSearch" placeholder="Search FAQs...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+        </section>
+
+        <section class="faq-content">
+            <div class="faq-tabs">
+                <button class="tab-btn active" data-category="indoor">Indoor Equipment</button>
+                <button class="tab-btn" data-category="outdoor">Outdoor Equipment</button>
+            </div>
+
+            <div class="faq-sections">
+                <!-- Indoor Equipment FAQs -->
+                <div class="faq-category active" id="indoor-faqs">
+                    <div class="faq-group">
+                        <h2>Treadmills & Cardio Equipment</h2>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>How often should I lubricate my treadmill belt?</h3>
+                                <span class="toggle">+</span>
+                            </div>
+                            <!-- Example of enhanced FAQ answer formatting -->
+                            <div class="faq-answer">
+                                <p>For optimal performance, lubricate your treadmill belt <strong>every 3 months</strong> or after <strong>130 miles</strong> of use. Follow these steps:
+                                <ul>
+                                    <li>Clean the belt surface thoroughly</li>
+                                    <li>Apply <em>silicone-based lubricant only</em></li>
+                                    <li>Distribute evenly across the belt</li>
+                                    <li>Run the treadmill for 5 minutes to spread lubricant</li>
+                                </ul>
+                                <span class="note">Note: Over-lubrication can damage the belt. If unsure, consult your manual or contact support.</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>Why is my treadmill display not working?</h3>
+                                <span class="toggle">+</span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Common causes include: loose power connection, tripped circuit breaker, or console malfunction. First, check all connections and reset the machine. If issues persist, contact our technical support.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>How do I calibrate my exercise bike's resistance?</h3>
+                                <span class="toggle">+</span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Enter calibration mode by holding down the resistance up/down buttons for 5 seconds. Follow the on-screen prompts to set minimum and maximum resistance levels. For magnetic bikes, this may require technical assistance.</p>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="faq-group">
+                        <h2>Strength Training Equipment</h2>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>How often should I inspect cable machines?</h3>
+                                <span class="toggle">+</span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Inspect cables weekly for signs of wear, fraying, or damage. Clean pulleys monthly and lubricate moving parts every 3 months. Replace cables immediately if any damage is detected.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>What's the weight capacity of your equipment?</h3>
+                                <span class="toggle">+</span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Weight capacities vary by model: Standard benches support 300-600lbs, power racks 1000-1500lbs, and cable machines 200-400lbs per station. Check your specific model's manual for exact specifications.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Outdoor Equipment FAQs -->
+                <div class="faq-category" id="outdoor-faqs">
+                    <div class="faq-group">
+                        <h2>Installation & Setup</h2>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>What's the best surface for outdoor equipment?</h3>
+                                <span class="toggle">+</span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>We recommend rubber matting or shock-absorbing surfaces with proper drainage. Concrete or level paving stones work well. The surface should be level and stable. Avoid direct soil contact to prevent rust and instability.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>How do I protect equipment from weather?</h3>
+                                <span class="toggle">+</span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Use weather-resistant covers when equipment is not in use. Apply rust-prevention coating bi-annually. Ensure proper drainage around equipment and check for rust monthly. Store removable parts indoors during severe weather.</p>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="faq-group">
+                        <h2>Maintenance & Care</h2>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>How often should I check outdoor equipment?</h3>
+                                <span class="toggle">+</span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Perform weekly visual inspections for rust or damage. Tighten all bolts monthly. Clean equipment bi-weekly and apply protective coating every 6 months. Check safety features before each use.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>What cleaning products are safe to use?</h3>
+                                <span class="toggle">+</span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Use mild soap and water for regular cleaning. Avoid harsh chemicals that can damage protective coatings. For metal surfaces, use specialized outdoor equipment cleaners. Always dry thoroughly after cleaning.</p>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="faq-group">
+                        <h2>Safety & Usage</h2>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>What are the safety guidelines for outdoor gyms?</h3>
+                                <span class="toggle">+</span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Always inspect equipment before use, maintain proper form, use safety features provided, and avoid use during severe weather. Keep children supervised and follow posted weight limits and usage instructions.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>Can I customize my outdoor gym layout?</h3>
+                                <span class="toggle">+</span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Yes, our equipment is modular and can be arranged in various configurations. Consider space requirements, safety zones, and proper anchoring. Contact our design team for custom layout assistance.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="still-have-questions">
+            <h2>Still Have Questions?</h2>
+            <p>Can't find what you're looking for? We're here to help!</p>
+            <div class="contact-options">
+                <a href="live-chat.html" class="contact-btn">
+                    <i class="fas fa-comments"></i>
+                    Start Live Chat
+                </a>
+                <a href="mailto:support@refinedfitness.com" class="contact-btn">
+                    <i class="fas fa-envelope"></i>
+                    Email Support
+                </a>
+            </div>
+        </section>
+    </main>
+<!-- Footer start -->
+
+<footer class="site-footer">
+    <div class="footer-content">
+        <div class="footer-section">
+            <div class="footer-logo">
+                <h2>Refined<span> Fitness</span></h2>
+                <p>Improving The Quality Of Your Life</p>
+            </div>
+            <div class="social-links">
+                <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+        
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul class="footer-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="support.html">Support</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        
+        <!-- Update the assembly link in the footer section -->
+        <div class="footer-section">
+            <h3>Support</h3>
+            <ul class="footer-links">
+                <li><a href="shipping.html">Shipping Info</a></li>
+                <li><a href="returns.html">Returns & Refunds</a></li>
+                <li><a href="faqs.html">FAQs</a></li>
+                <li><a href="assembly-guides.html">Assembly Guides</a></li>
+            </ul>
+        </div>
+        
+        <div class="footer-section">
+            <h3>Contact Us</h3>
+            <ul class="contact-info">
+                <li><i class="fas fa-map-marker-alt"></i>Buwaate. Kampala, Uganda</li>
+                <li><i class="fas fa-phone"></i>+256 782 155 626</li>
+                <li><i class="fas fa-envelope"></i> support@refinedfitness.com</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="footer-bottom">
+        <p>&copy; 2025 Refined Fitness. All rights reserved.</p>
+        <div class="legal-links">
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Service</a>
+        </div>
+    </div>
+</footer>
+
+<!-- Footer end -->
+
+    <script src="assets/js/menu.js"></script>
+    <script src="assets/js/faqs.js"></script>
+</body>
+</html>

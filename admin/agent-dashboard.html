@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Add these polyfills before your other scripts -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agent Dashboard - Refined Fitness</title>
+    <link rel="stylesheet" href="../admin/agent-chat.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/live-chat.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <link rel="stylesheet" href="../assets/css/notification.css">
+</head>
+<body>
+    <div class="agent-dashboard">
+        <div class="chat-list">
+            <h2>Active Conversations</h2>
+            <button id="clearMessages" class="clear-btn">Clear All Messages</button>
+            <div id="activeChats"></div>
+        </div>
+        <div class="chat-window">
+            <div id="chatHistory" class="chat-messages"></div>
+            <div class="reply-box">
+                <textarea id="replyInput" placeholder="Type your response..."></textarea>
+                <button id="sendReply" class="submit-btn">Send</button>
+            </div>
+        </div>
+    </div>
+    <div id="notificationContainer" class="notification-container"></div>
+    <script>
+        (function() {
+            emailjs.init("ry-BoOClBJSvulKCj");
+        })();
+    </script>
+    <script src="../assets/js/live-chat.js"></script>
+    <script src="../admin/agent-chat.js"></script>
+</body>
+</html>

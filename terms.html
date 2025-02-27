@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service - Refined Fitness</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/terms.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="logo-container">
+        <nav class="main-nav">
+            <div class="logo">
+                <h1>Refined<span> Fitness</span></h1>
+                <p class="tagline">Improving The Quality Of Your Life</p>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="products.html">Products</a>
+                <a href="projects.html">Projects</a>
+                <a href="support.html">Support</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="terms-container">
+        <section class="terms-hero">
+            <h1>Terms of Service</h1>
+            <p>Last updated: <span id="lastUpdated"></span></p>
+        </section>
+
+        <section class="terms-content">
+            <div class="terms-section">
+                <h2>1. Acceptance of Terms</h2>
+                <p>By accessing and using Refined Fitness services, you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use our services.</p>
+            </div>
+
+            <div class="terms-section">
+                <h2>2. Products and Services</h2>
+                <ul>
+                    <li>All products are subject to availability</li>
+                    <li>Prices are subject to change without notice</li>
+                    <li>Product specifications may vary</li>
+                    <li>We reserve the right to limit quantities</li>
+                </ul>
+            </div>
+
+            <div class="terms-section">
+                <h2>3. Payment Terms</h2>
+                <ul>
+                    <li>All prices are in Ugandan Shillings unless otherwise stated</li>
+                    <li>Payment is required at time of purchase</li>
+                    <li>We accept bank payment, mobile money payment and specified payment methods</li>
+                    <li>Financing options available for qualifying purchases</li>
+                </ul>
+            </div>
+
+            <div class="terms-section">
+                <h2>4. Shipping Policy</h2>
+                <ul>
+                    <li>Delivery times are estimates only</li>
+                    <li>Shipping costs are calculated at checkout</li>
+                    <li>International duties and taxes are buyer's responsibility</li>
+                    <li>Risk of loss transfers upon delivery</li>
+                </ul>
+            </div>
+
+            <div class="terms-section">
+                <h2>5. Warranty Information</h2>
+                <ul>
+                    <li>Indoor equipment: 2-year warranty</li>
+                    <li>Outdoor equipment: 1-year warranty</li>
+                    <li>Warranty covers manufacturing defects</li>
+                    <li>Regular maintenance required for warranty validity</li>
+                </ul>
+            </div>
+
+            <div class="terms-section">
+                <h2>6. Limitation of Liability</h2>
+                <p>Refined Fitness shall not be liable for any indirect, incidental, special, consequential, or punitive damages resulting from your use of our products or services.</p>
+            </div>
+
+            <div class="terms-section">
+                <h2>7. Contact Information</h2>
+                <div class="contact-details">
+                    <p>For questions about these terms, please contact:</p>
+                    <p>Email: legal@refinedfitness.com</p>
+                    <p>Phone: +256 782 155 626</p>
+                    <p>Address: Buwaate, Kampala, Uganda</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="assets/js/menu.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const date = new Date();
+            date.setDate(date.getDate() - 1);
+            const options = { year: 'numeric', month: 'long', day: 'numeric' };
+            const formattedDate = date.toLocaleDateString('en-US', options);
+            document.getElementById('lastUpdated').textContent = formattedDate;
+        });
+    </script>
+</body>
+</html>
